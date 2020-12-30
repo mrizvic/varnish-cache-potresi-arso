@@ -51,6 +51,7 @@ sub vcl_backend_response {
     # and other mistakes your backend does.
     
     # Glej https://varnish-cache.org/docs/trunk/users-guide/vcl-grace.html
+    # Slika pove več https://docs.varnish-software.com/tutorials/object-lifetime/
     set beresp.ttl = 1m;
     set beresp.grace = 2m;
     set beresp.keep = 3m;
