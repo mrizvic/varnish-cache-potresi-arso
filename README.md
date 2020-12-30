@@ -12,6 +12,15 @@ Opazuj varnish za hit/miss cache objekte
 ```
 varnishncsa -F '%U%q %{Varnish:hitmiss}x'
 ```
+Pri zgornjem velja tole:
+```
+       %U     The request URL without the query string. Defaults to '-' if not known.
+       %q     The query string. Defaults to an empty string if not present.
+       %{X}x  Extended variables:
+              Varnish:hitmiss
+                     One  of  the 'hit' or 'miss' strings, depending on whether the request was a cache hit or miss. Pipe, pass
+                     and synth are considered misses.
+```
 
 Če te zanima kaj se dogaja znotraj varnisha
 ```
