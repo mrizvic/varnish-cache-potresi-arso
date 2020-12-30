@@ -1,5 +1,6 @@
 # varnish-cache-potresi-arso
-Varnish konfiguracija za caching spletne strani potresi.arso.gov.si
+Varnish konfiguracija za caching spletne strani potresi.arso.gov.si.
+Ob povečanem obisku se namreč strežnik omenjene spletne strani sesuje. Varnish vidim kot najlažjo možno rešitev za obvladovanje prometnih špic. Prednost je namreč v tem, da ni potrebno popravljati backend kode.
 
 Dokumentacija je na https://varnish-cache.org/
 
