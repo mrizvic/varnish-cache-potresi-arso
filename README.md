@@ -2,9 +2,17 @@
 Varnish konfiguracija za caching spletne strani potresi.arso.gov.si.
 Ob povečanem obisku se namreč strežnik omenjene spletne strani sesuje. Varnish vidim kot najlažjo možno rešitev za obvladovanje prometnih špic. Prednost je namreč v tem, da ni potrebno popravljati backend kode.
 
-Dokumentacija je na https://varnish-cache.org/
+Kaj je varnish?
+Si bom kar sposodil dva odstavka iz https://www.tecmint.com/install-varnish-cache-for-nginx-on-centos-rhel-8/
 
-Na kratko pa takole:
+> Varnish Cache (commonly referred to as Varnish) is an open-source, powerful and fast reverse-proxy HTTP accelerator with modern architecture and flexible configuration language. Being a reverse proxy simply means it is a software that you can deploy in front of your web server (which is the origin server or backend) such as Nginx, to receive clients HTTP requests and forward to the origin server for processing. And it delivers the response from the origin server to clients.
+>
+> Varnish acts as a middleman between Nginx and clients but with some performance benefits. Its main purpose is to make your applications load faster, by working as a caching engine. It receives requests from clients and forwards them to the backend once to cache the requested content (store files and fragments of files in memory). Then all future requests for exactly similar content will be served from the cache.
+
+Uradna dokumentacija je na https://varnish-cache.org/
+Odlicna dokumentacija je pa tule https://docs.varnish-software.com/ ter https://info.varnish-software.com/the-varnish-book
+
+Postavitev na kratko pa takole:
 ```
 apt install varnish
 ```
