@@ -20,7 +20,9 @@ apt install varnish
 ```
 Datoteko `default.vcl` skopiraj v `/etc/varnish/`.
 
-Preden poženeš servis popravi ustrezen systemd unit (ali naredi override), da bo poslušal na portu 80. Najlazje z ukazom `systemctl edit --full varnish`
+Preden poženeš servis popravi ustrezen systemd unit (ali naredi override), da bo poslušal na portu 80.
+
+Najlazje z ukazom `systemctl edit --full varnish` ter urediš vsebino, da bo ExecStart vseboval `-a :80`
 ```
 ExecStart=/usr/sbin/varnishd -j unix,user=vcache -F -a :80 -T localhost:6082 -f /etc/varnish/default.vcl -S /etc/varnish/secret -s 
 ```
